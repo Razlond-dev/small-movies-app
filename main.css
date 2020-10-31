@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(4, 163, 147);
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: rgb(241, 168, 168);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background-color: transparent;
+  border: solid 2px rgb(118, 247, 234);
+  font-family: inherit;
+  color: white;
+}
+
+.search::placeholder {
+  color: azure;
+}
+
+.search {
+  background-color: #2224b2;
+  outline: none;
+}
+
+.movie {
+  background-color: rgb(118, 247, 234);
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(146, 14, 14);
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  background-color: white;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+}
+
+.overview {
+  position: absolute;
+  background-color: white;
+  padding: 2rem;
+  max-height: 100%;
+  overflow: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate(101%);
+  transition: transform 0.4s ease-in;
+}
+
+.overview h4 {
+  margin-top: 0;
+}
+
+.movie-info span.green {
+  color: green;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.movie:hover .overview {
+  transform: translate(0)
+}
